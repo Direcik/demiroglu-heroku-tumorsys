@@ -1,0 +1,9 @@
+gunicorn
+os
+tensorflow
+numpy
+PIL
+cv2
+keras
+flask
+werkzeug
