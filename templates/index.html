@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<br><br>
+<div class= "jumbotron text-center" style="background-color: #1c1d1f;">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{url_for('static', filename='img/tumorsys_clip.png')}}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="container"></div>
+<div class="text-center">
+    <h1 class="display-4" style="color:#003153;">Nasıl Kullanılır?</h1>
+    <li style="font-size:20px">Beyin Tümör Tespiti bölümüne gidilir.</li>
+    <li style="font-size:20px">Bilgisayarda yer alan görüntü seçilir. <i>(Örnek görüntüler aşağıda yer almaktadır.)</i></li>
+    <li style="font-size:20px">Görüntü yüklemesi yapıldıktan sonra <b>Tahmin</b> butonuna basılır ve sonuç ekrana bastırılır.</li>
+</div>
+<hr>
+<div class="text-center">
+    <img src="{{url_for('static', filename='img/pred1.jpg')}}" style="width: 200px; height: 200px;">
+    <hr>
+    <img src="{{url_for('static', filename='img/pred2.jpg')}}" style="width: 200px; height: 200px;">
+  </div>
+
+
+<br>
+<br>
+<br>
+{% endblock body %}

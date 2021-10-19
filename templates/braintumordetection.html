@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div  class="text-center">
+     <h1 class="display-4" style="color:#003153;" >Beyin Tümör Tespiti</h1>
+     <div class="alert alert-danger" role="alert">
+          <strong> Kişisel gelişim için hazırlanmış derin öğrenme algoritmasıdır.  Sonuçların teşhis amaçlı kullanılması önerilmez. </strong>
+     </div>
+     
+     <form id="upload-file" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" class="btn btn-dark" id="imageUpload" accept=".png, .jpg, .jpeg" style="background-color: #003153;">
+     </form>
+     
+     <br>
+
+     <div class="image-section" style="display:none;">
+          <img id="imagePreview"  class="img-responsive" src="#" style="width:300px;height:300px;"/><br><br>
+               <div>
+                    <button type="button" class="btn btn-info btn-lg " id="btn-predict">Tahmin</button>
+               </div>
+     </div>
+     <center>
+     <div class="loader" style="display:none;"></div>
+     </center>
+     <h2 id="result">
+          <span> </span>
+     </h2>
+     <br><br>
+</div>
+
+{% endblock body %}
+
