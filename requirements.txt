@@ -2,8 +2,8 @@ gunicorn
 os-sys
 tensorflow
 numpy
-PIL
-cv2
+Pillow
+opencv-python
 keras
-flask
-werkzeug
+Flask
+Werkzeug
