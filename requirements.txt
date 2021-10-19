@@ -1,5 +1,5 @@
 gunicorn
-os
+os-sys
 tensorflow
 numpy
 PIL
