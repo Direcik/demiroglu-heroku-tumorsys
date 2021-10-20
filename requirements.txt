@@ -1,5 +1,4 @@
 gunicorn
-os-sys==2.1.3
 tensorflow
 numpy
 Pillow
@@ -7,3 +6,4 @@ opencv-python
 keras
 Flask
 Werkzeug
+os-sys==2.1.3
