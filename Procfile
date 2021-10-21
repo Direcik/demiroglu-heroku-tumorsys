@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+hobby: gunicorn wsgi:app
