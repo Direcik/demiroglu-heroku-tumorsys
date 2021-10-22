@@ -7,7 +7,8 @@ from flask import Flask, render_template, request, url_for
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-model = load_model('BrainTumor10EpochsCategorical.h5')
+model = load_model('BrainTumorCategorical.h5')
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 def get_className(classNo):
     if classNo == 0:
