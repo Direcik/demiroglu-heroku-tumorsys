@@ -10,6 +10,18 @@ app = Flask(__name__)
 model = load_model('BrainTumorCategorical.h5')
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
+PROJECT_HOME = os.path.dirname(os.path.realpath(__file__))
+UPLOAD_FOLDER = '{}/uploads/'.format(PROJECT_HOME)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
+def create_new_folder(local_dir):
+	newpath = local_dir
+	if not os.path.exists(newpath):
+		os.makedirs(newpath)
+		
+	return newpath
+
 def get_className(classNo):
     if classNo == 0:
         return 'BEYİNDE TÜMÖR YOK'
@@ -41,6 +53,7 @@ def braintumordetection():
 def upload():
     if request.method == 'POST':
         f = request.files['file']
+        create_new_folder(app.config['UPLOAD_FOLDER'])
         basepath = os.path.dirname(__file__)
         file_path = os.path.join(basepath, 'uploads', secure_filename(f.filename))
         f.save(file_path)
