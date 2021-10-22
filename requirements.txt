@@ -5,4 +5,4 @@ opencv-python-headless==4.2.0.32
 keras
 Flask
 Werkzeug
-tensorflow-cpu
+tensorflow==1.15.5
