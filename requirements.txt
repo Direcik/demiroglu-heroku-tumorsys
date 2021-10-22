@@ -6,3 +6,5 @@ keras
 Flask
 Werkzeug
 tensorflow-cpu
+pandas
+Bottleneck
