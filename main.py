@@ -46,5 +46,4 @@ def upload():
         value = getResult(file_path)
         result = get_className(value)
         return result
-    return None
 
